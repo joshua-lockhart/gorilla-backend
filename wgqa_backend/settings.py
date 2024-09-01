@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-k0vhq1&0vw!sl_
 
 DEBUG = os.environ.get('DJANGO-DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['ec2-18-169-50-131.eu-west-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['joshualockhart.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -53,9 +53,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://joshualockhart.pythonanywhere.com']
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5000",
-    "http://ec2-13-41-187-59.eu-west-2.compute.amazonaws.com"
+    "https://localhost"
+    "https://joshualockhart.pythonanywhere.com"
 ]
 
 ROOT_URLCONF = 'wgqa_backend.urls'
