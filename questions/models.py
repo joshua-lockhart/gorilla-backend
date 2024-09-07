@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class WebPage(models.Model):
-    dokuwiki_id = models.CharField(unique=True, max_length=255)
+    dokuwiki_id = models.CharField(unique=True, max_length=255, primary_key=True)
     title = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
 
